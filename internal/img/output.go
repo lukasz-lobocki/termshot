@@ -74,7 +74,7 @@ type Scaffold struct {
 var thisColNum int
 
 func NewImageCreator() Scaffold {
-	f := 2.0
+	f := 1.0 //f := 2.0
 
 	fontRegular, _ := truetype.Parse(fonts.JetBrainsMonoRegular)
 	fontBold, _ := truetype.Parse(fonts.JetBrainsMonoBold)
@@ -91,10 +91,10 @@ func NewImageCreator() Scaffold {
 		columns: cols,
 		rows:    rows,
 
-		margin:  f * 48,
+		margin:  0, //f * 48,
 		padding: f * 24,
 
-		drawShadow:      true,
+		drawShadow:      false, //true,
 		shadowBaseColor: "#10101066",
 		shadowRadius:    uint8(math.Min(f*16, 255)),
 		shadowOffsetX:   f * 16,
@@ -179,7 +179,7 @@ func (s *Scaffold) image() (image.Image, error) {
 	var f = func(value float64) float64 { return s.factor * value }
 
 	var (
-		corner   = f(6)
+		corner   = f(12) // f(6)
 		radius   = f(9)
 		distance = f(25)
 	)
@@ -295,9 +295,6 @@ func (s *Scaffold) image() (image.Image, error) {
 		case "\t":
 			x += w * float64(s.tabSpaces)
 			continue
-
-		case "✗", "ˣ": // mitigate issue #1 by replacing it with a similar character
-			str = "×"
 		}
 
 		dc.DrawString(str, x, y)

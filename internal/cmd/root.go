@@ -75,7 +75,7 @@ window including all terminal colors and text decorations.
 
 		// Prepend command line arguments to output content
 		if includeCommand, err := cmd.Flags().GetBool("show-cmd"); err == nil && includeCommand {
-			bunt.Fprintf(&buf, "Lime{➜} DimGray{%s}\n", strings.Join(args, " "))
+			bunt.Fprintf(&buf, "Lime{$} DimGray{%s}\n\n", strings.Join(args, " "))
 		}
 
 		bytes, err := ptexec.RunCommandInPseudoTerminal(args[0], args[1:]...)
