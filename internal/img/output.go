@@ -76,10 +76,10 @@ var thisColNum int
 func NewImageCreator() Scaffold {
 	f := 1.0 //f := 2.0
 
-	fontRegular, _ := truetype.Parse(fonts.JetBrainsMonoRegular)
-	fontBold, _ := truetype.Parse(fonts.JetBrainsMonoBold)
-	fontItalic, _ := truetype.Parse(fonts.JetBrainsMonoItalic)
-	fontBoldItalic, _ := truetype.Parse(fonts.JetBrainsMonoBoldItalic)
+	fontRegular, _ := truetype.Parse(fonts.MonoRegular)
+	fontBold, _ := truetype.Parse(fonts.MonoBold)
+	fontItalic, _ := truetype.Parse(fonts.MonoItalic)
+	fontBoldItalic, _ := truetype.Parse(fonts.MonoBoldItalic)
 	fontFaceOptions := &truetype.Options{Size: f * 12, DPI: 144}
 
 	cols, rows := term.GetTerminalSize()
