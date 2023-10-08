@@ -22,14 +22,14 @@ package fonts
 
 import _ "embed"
 
-//go:embed JetBrainsMono-Bold.ttf
-var JetBrainsMonoBold []byte
+//go:embed JuliaMono-Bold.ttf
+var MonoBold []byte
 
-//go:embed JetBrainsMono-BoldItalic.ttf
-var JetBrainsMonoBoldItalic []byte
+//go:embed JuliaMono-BoldItalic.ttf
+var MonoBoldItalic []byte
 
-//go:embed JetBrainsMono-Italic.ttf
-var JetBrainsMonoItalic []byte
+//go:embed JuliaMono-RegularItalic.ttf
+var MonoItalic []byte
 
-//go:embed JetBrainsMono-Regular.ttf
-var JetBrainsMonoRegular []byte
+//go:embed JuliaMono-Regular.ttf
+var MonoRegular []byte
